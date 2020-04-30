@@ -4,12 +4,11 @@ import './menu-item.styles.scss'
 import Content from '../content/content.component'
 
 const MenuItem = ({ title, imageUrl, size, linkUrl, history, match }) => {
-  console.log(match)
   return (
     <div
       className={`${size ? size+' ' : ''}menu-item`}
       onClick={() => {
-        history.push(`${match.url}hats`) /// linkUrl
+        history.push(`${match.url}${linkUrl}`)
       }}
     >
       <div 
