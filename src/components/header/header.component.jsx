@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { auth } from '../../firebase/firebase.utils';
+import CartIcon from '../cart-icon/cart-icon.component';
 
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+
+import CartDropdown from "../cart-dropdown/cart-dropdown.component";
 
 import './header.styles.scss';
 
@@ -31,7 +34,9 @@ const Header = ({ currentUser }) => {
             SIGN IN
           </Link>
         }
+        <CartIcon/>
       </div>
+      <CartDropdown/>
     </div>
   )
 }
